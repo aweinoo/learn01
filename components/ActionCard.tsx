@@ -1,4 +1,11 @@
-import { StyleSheet, Text, View, Linking, Image, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Linking,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 
 export default function ActionCard() {
@@ -16,7 +23,7 @@ export default function ActionCard() {
         </View>
         <Image
           source={{
-            uri: 'https://i.ytimg.com/an_webp/QpTPQmBsOyI/mqdefault_6s.webp?du=3000&sqp=CMyums0G&rs=AOn4CLBNhzY-DhMzqjrWqjkY_XcY-qGSCQ',
+            uri: 'https://images.pexels.com/photos/29586317/pexels-photo-29586317.jpeg',
           }}
           style={styles.cardImage}
         />
@@ -36,14 +43,14 @@ export default function ActionCard() {
               )
             }
           >
-            <Text style={styles.footerContainer}>Read More</Text>
+            <Text style={styles.socialLinks}>Read More</Text>
           </TouchableOpacity>
           <TouchableOpacity
             onPress={() =>
               openWebsite('https://www.instagram.com/awanmistcuber/')
             }
           >
-            <Text style={styles.footerContainer}>Follow me</Text>
+            <Text style={styles.socialLinks}>Follow me</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -55,16 +62,57 @@ const styles = StyleSheet.create({
   headingText: {
     fontSize: 20,
     fontWeight: 'bold',
+    paddingHorizontal: 8,
+  },
+  card: {
+    width: 350,
+    height: 350,
+    borderRadius: 6,
+    marginVertical: 12,
     marginHorizontal: 16,
   },
-  card: {},
-  elevatedCard: {},
-  headingContainer: {},
-  headerText: {},
+  elevatedCard: {
+    backgroundColor: '#E07C24',
+    elevation: 3,
+    shadowOffset: {
+      width: 1,
+      height: 1,
+    },
+    shadowColor: '#333',
+    shadowOpacity: 0.4,
+  },
+  headingContainer: {
+    height: 40,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignContent: 'center',
+  },
+  headerText: {
+    color: '#000',
+    fontSize: 16,
+    fontWeight: '600',
+  },
   cardImage: {
     height: 100,
+    width: '100%',
+    resizeMode: 'cover',
     marginBottom: 10,
   },
-  bodyContainer: {},
-  footerContainer: {}
+  bodyContainer: {
+    padding: 10,
+  },
+  footerContainer: {
+    padding: 8,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+  },
+  socialLinks: {
+    fontSize: 16,
+    color: '#000000',
+    backgroundColor: '#FFF',
+    paddingHorizontal: 20,
+    paddingVertical: 6,
+    borderRadius: 6,
+  },
 });
