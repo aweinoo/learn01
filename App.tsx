@@ -8,14 +8,12 @@ import ActionCard from './components/ActionCard';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <View>
-          <FlatCards></FlatCards>
-          <ElevatedCards></ElevatedCards>
-          <FancyCard></FancyCard>
-          <ActionCard></ActionCard>
-        </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView contentContainerStyle={{ paddingBottom: 40 }} >
+        <FlatCards></FlatCards>
+        <ElevatedCards></ElevatedCards>
+        <FancyCard></FancyCard>
+        <ActionCard></ActionCard>
       </ScrollView>
     </SafeAreaView>
   );

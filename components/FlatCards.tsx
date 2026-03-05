@@ -4,27 +4,24 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function FlatCards() {
   return (
-      <SafeAreaView>
-        <View>
-          <Text style={styles.headingText}>FlatCards</Text>
-          <View style={styles.container}>
-            <View style={[styles.card, styles.pinkCard]}>
-              <Text>Red</Text>
-            </View>
-            <View style={[styles.card, styles.greenCard, ]}>
-              <Text>Green</Text>
-            </View>
-            <View style={[styles.card, styles.aquaCard]}>
-              <Text>Blue</Text>
-            </View>
-            <View style={[styles.card, styles.yellowCard]}>
-              <Text>Yellow</Text>
-            </View>
-          </View>
+    <View>
+      <Text style={styles.headingText}>FlatCards</Text>
+      <View style={styles.container}>
+        <View style={[styles.card, styles.pinkCard]}>
+          <Text>Red</Text>
         </View>
-        <ScrollView></ScrollView>
-      </SafeAreaView>
-    );
+        <View style={[styles.card, styles.greenCard]}>
+          <Text>Green</Text>
+        </View>
+        <View style={[styles.card, styles.aquaCard]}>
+          <Text>Blue</Text>
+        </View>
+        <View style={[styles.card, styles.yellowCard]}>
+          <Text>Yellow</Text>
+        </View>
+      </View>
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
@@ -35,9 +32,9 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   container: {
-   flex: 1,
-   flexDirection: 'row',
-   padding: 8
+    flex: 1,
+    flexDirection: 'row',
+    padding: 8,
   },
   card: {
     flex: 1,
@@ -46,7 +43,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
     borderRadius: 10,
-    margin: 8, 
+    margin: 8,
   },
   pinkCard: {
     backgroundColor: 'pink',
@@ -61,5 +58,3 @@ const styles = StyleSheet.create({
     backgroundColor: 'yellow',
   },
 });
-
-
